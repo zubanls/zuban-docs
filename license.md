@@ -1,4 +1,4 @@
-# Activate your license
+# License Activation
 
 To activate your license, copy the license you have received to:
 
