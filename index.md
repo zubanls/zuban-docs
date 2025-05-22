@@ -36,6 +36,7 @@ A few things are currently not yet implemented:
 :maxdepth: 2
 
 installation.md
+usage.md
 logs.md
 license.md
 ```
