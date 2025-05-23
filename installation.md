@@ -7,6 +7,9 @@ You can install zubanls by using:
 pip install zuban --break-system-packages --upgrade
 ```
 
+Note: Using `--break-system-packages` should not pose any issues, as no
+third-party Python packages are actually installed.
+
 After installation, two executables will be available:
 
 - `zmypy` - A command-line tool compatible with Mypy usage (e.g., `zmypy --strict`)
