@@ -26,7 +26,6 @@ A few things are currently not yet implemented:
 - The match statement may result in names being assigned the type Any.
 - Function bodies using bounded TypeVar definitions (e.g., `TypeVar("T", str, bytes)`) are not currently type-checked. This limitation is unlikely to affect most users.
 - Unused `# type: ignore` comments are not yet reported.
-- The `--allow-redefinition` and `--allow-redefinition-new` flags are not yet implemented.
 - General plugin support is not planned; however, targeted plugins for popular
   libraries, such as Django, will be provided.
 
