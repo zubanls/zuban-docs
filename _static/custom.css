@@ -3,3 +3,21 @@ h1.logo {
     font-size: 40px;
     padding-top: 8px;
 }
+
+body, div.body {
+    background-color: #f4f2ef;
+}
+
+div.body {
+    color: #28241d;
+}
+
+div.note {
+    background-color: #d1cdc7;
+    border-color: #8c8476;
+}
+
+.highlight {
+    /*background-color: #FAF3E8;*/
+    background-color: #fffaf1;
+}
