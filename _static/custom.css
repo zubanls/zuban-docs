@@ -1,39 +1,61 @@
 h1.logo {
-    font-family: Verdana, sans-serif;
-    font-size: 40px;
-    padding-top: 8px;
+  font-family: 'LatoLatinBold', sans-serif;
+  font-size: 50px;
+  padding-top: 8px;
 }
 
 body, div.body {
-    background-color: #f4f2ef;
+  background-color: #f4f2ef;
 }
 
 div.body {
-    color: #28241d;
+  color: #28241d;
 }
 
 div.note {
-    background-color: #d1cdc7;
-    border-color: #8c8476;
+  background-color: #d1cdc7;
+  border-color: #8c8476;
 }
 
 .highlight {
-    /*background-color: #FAF3E8;*/
-    background-color: #fffaf1;
+  /*background-color: #FAF3E8;*/
+  background-color: #fffaf1;
 }
 
 code {
-    /*background-color: #ecf0f3;*/
-    background-color: #fff;
+  /*background-color: #ecf0f3;*/
+  background-color: #fff;
 }
 
 a {
-    color: #07797f;
+  color: #07797f;
 }
 a:visited {
-    color: #63004c;
+  color: #63004c;
 }
 
 .bodywrapper a.reference:visited {
-    border-bottom-color: #63004c;
+  border-bottom-color: #63004c;
+}
+
+@font-face {
+  font-family: 'LatoLatin';
+  src: url('LatoLatin-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LatoLatinBold';
+  src: url('LatoLatin-Bold.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: 'LatoLatin', sans-serif;
+}
+
+div.body h1, div.body h2, div.body h3, div.body h4, div.body h5, div.body h6 {
+  font-family: 'LatoLatinBold', sans-serif;
 }
