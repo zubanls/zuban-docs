@@ -12,3 +12,9 @@ Most of the [Mypy docs](https://mypy.readthedocs.io) apply, for example:
 
 To use zubanls, simply [install](installation_start) it, add to your editor of
 choice and start coding. There are currently no command line options.
+
+## Logging
+
+To enable logging you can set the environment variable `ZUBAN_LOG_FILE=<some-file>`.
+
+Most of the time you are probably interested in more verbose logging and you should set the environment variable `ZUBAN_LOG=info` or `ZUBAN_LOG=debug`.

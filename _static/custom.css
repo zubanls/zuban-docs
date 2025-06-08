@@ -21,3 +21,19 @@ div.note {
     /*background-color: #FAF3E8;*/
     background-color: #fffaf1;
 }
+
+code {
+    /*background-color: #ecf0f3;*/
+    background-color: #fff;
+}
+
+a {
+    color: #07797f;
+}
+a:visited {
+    color: #63004c;
+}
+
+.bodywrapper a.reference:visited {
+    border-bottom-color: #63004c;
+}

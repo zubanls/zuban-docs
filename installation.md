@@ -27,7 +27,10 @@ example configs for some IDE's/Editors.
 
 Install the extension from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=zuban.zubanls).
 
-
+If you're using a virtual environment, make sure to activate it and start
+ZubanLS from the corresponding directory. VSCode integration is limited for
+now, but future updates will aim to support virtual environment selection
+within the editor.
 
 ## VIM
 
