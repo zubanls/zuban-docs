@@ -25,7 +25,7 @@ support for the Python type system, including:
 
 installation.md
 usage.md
-mypy.md
+features.md
 license.md
 comparison.md
 ```

@@ -1,4 +1,4 @@
-# Features / Mypy Compatibility
+# Features
 
 By default, ZubanLS runs in a non-Mypy-compatible mode. If a Mypy configuration
 is found in `mypy.ini` or `pyproject.toml`, it will switch to Mypy-compatible mode.
