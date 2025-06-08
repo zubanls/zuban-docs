@@ -47,22 +47,24 @@ with their corresponding PEPs.
 - Type narrowing - Based on isinstance, assert, if conditions, etc
 - Inferring the type context (e.g. `x: list[object] = [1]`)
 - Mypy's `--new-type-inference` (enabled by default in [Mypy 1.7.0](https://github.com/python/mypy/issues/15906))
-- Understanding `list.append`, list.extend`, `set.add` and `set.extend`
+- Understanding `list.append`, `list.extend`, `set.add` and `set.extend`
 
 ### Development Tooling
 
-- Mypy config compatibility - Honors .mypy.ini, mypy.ini, or pyproject.toml settings
-- IDE integration - Emits diagnostics in a format IDEs and LSPs can use.
+- Mypy config compatibility - Honors `.mypy.ini`, `mypy.ini`, or `pyproject.toml` settings
 - Incremental checking - Only rechecks changed files for performance when
   running the language server
-- LSP protocol support - Diagnostics through Language Server Protocol (even if
+- [LSP protocol](https://microsoft.github.io/language-server-protocol/specifications/specification-current/)
+  support - Diagnostics through Language Server Protocol (even if
   other LSP features like completion aren't present).
 - Watch mode - Rechecks files automatically on change.
 
 ### Performance
 
-- Scalable to large codebases - Minimal memory use and fast execution.
-- Optimized to use low memory
+- ZubanLS is written in Rust for high performance. It runs on a single core but
+  is already over 20× faster than Mypy. Multi-core support is planned.
+  existing performance.
+- Optimized to minimize memory usage.
 
 ## Missing Features
 
