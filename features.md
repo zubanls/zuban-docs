@@ -7,7 +7,7 @@ over time.
 
 If you're experiencing issues but are otherwise satisfied with performance, you
 can report them via GitHub Issues. For commercial support or prioritized help,
-contact info@zubanls.com.
+contact info (at) zubanls.com.
 
 ## Features
 
