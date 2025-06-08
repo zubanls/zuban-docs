@@ -1,5 +1,9 @@
 # License
 
+
+
+## Activation
+
 To activate your license, copy the provided license file to:
 
 - Linux: `/home/<user>/.config/zuban/license.json`

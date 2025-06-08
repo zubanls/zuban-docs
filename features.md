@@ -17,6 +17,7 @@ Any deviations from this specification are considered bugs and will be
 addressed promptly. Below is a list of the features supported by ZubanLS, along
 with their corresponding PEPs.
 
+(type_features)=
 ### Type System Support
 
 - Generic types - Full support for TypeVar, bounded types, variance, etc. ([PEP 484](https://peps.python.org/pep-0484/))

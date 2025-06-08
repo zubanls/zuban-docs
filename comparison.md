@@ -25,7 +25,8 @@ supplement ZubanLS with most features it does not yet support.
 ## ty / pyrefly
 
 Both type checkers are still in early alpha stages and currently lack several
-fundamental {ref}`type system features <installation_start>`.
+fundamental {ref}`type system features <type_features>` that ZubanLS currently
+supports.
 
 
 ## Jedi
