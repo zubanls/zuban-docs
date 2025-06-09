@@ -38,6 +38,7 @@ with their corresponding PEPs.
   items ([PEP 705](https://peps.python.org/pep-0705/))
 - Explicit Type Aliases ([PEP 613](https://peps.python.org/pep-0613/))
 - Override decorator ([PEP 698](https://peps.python.org/pep-0698/))
+- TypeVar/TypeVarTuple/ParamSpec defaults ([PEP 696](https://peps.python.org/pep-0696/))
 - Narrowing types with TypeGuard ([PEP 647](https://peps.python.org/pep-0647/))
   and TypeIs ([PEP 742](https://peps.python.org/pep-0742/))
 
