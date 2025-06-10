@@ -52,6 +52,7 @@ with their corresponding PEPs.
 
 ### Development Tooling
 
+- Error recovery - Can recover gracefully from invalid Python syntax.
 - Mypy config compatibility - Honors `.mypy.ini`, `mypy.ini`, or `pyproject.toml` settings
 - Incremental checking - Only rechecks changed files for performance when
   running the language server
