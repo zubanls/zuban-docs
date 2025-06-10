@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'ZubanLS'
-copyright = '2025, David Halter'
+copyright = '2025, info (at) zubanls.com'
 author = 'David Halter'
 
 # -- General configuration ---------------------------------------------------
