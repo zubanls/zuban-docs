@@ -18,8 +18,8 @@ div.note {
 }
 
 .highlight {
-  /*background-color: #FAF3E8;*/
-  background-color: #fffaf1;
+  /*background-color: #FAF3E8; or #fffaf1*/
+  background-color: #fff;
 }
 
 code {
