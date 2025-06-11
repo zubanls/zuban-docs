@@ -60,6 +60,8 @@ with their corresponding PEPs.
   support - Diagnostics through Language Server Protocol (even if
   other LSP features like completion aren't present).
 - Watch mode - Rechecks files automatically on change.
+- Works on **Linux** (x86-64, AArch64, ARMv7, i686), **Mac** (ARM & x86-64) and
+  **Windows** (x86-64 and i686)
 
 ### Performance
 
