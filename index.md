@@ -1,7 +1,5 @@
 # The Zuban Language Server
 
-**FOR NOW ZUBANLS IS PRE-ALPHA, CONTACT info (at) zubanls.com IF YOU WANT TO TRY IT**
-
 ZubanLS is a Mypy-compatible, high-performance Python Language Server
 implemented in Rust, by the author of [Jedi](https://github.com/davidhalter/jedi).
 

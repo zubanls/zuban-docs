@@ -11,6 +11,9 @@ We define small to medium projects as those with 50,000 lines of code or less,
 roughly equivalent to 1–2 MB of Python source. Dependencies are not counted.
 This means most data science users will likely qualify for free usage.
 
+During the alpha period, all ZubanLS releases are available at a 100% discount.
+Check [pricing](https://zubanls.com/pricing) for more information.
+
 **You are permitted to use ZubanLS in your IDE or editor**. Licensing terms may
 change in future releases. Companies may not offer services built on top of
 ZubanLS without a license. For licensing inquiries, contact us at
