@@ -5,6 +5,11 @@ is found in `mypy.ini` or `pyproject.toml`, it will switch to Mypy-compatible mo
 Currently, false positives can be an issue, but this is expected to improve
 over time.
 
+The non-Mypy-compatible mode currently behaves similarly to running `mypy
+--allow-redefinition-new --local-partial-types --allow-untyped-globals`.
+However, it will likely begin type checking untyped code in the near future,
+gradually diverging further from Mypy's default behavior."
+
 If you're experiencing issues but are otherwise satisfied with performance, you
 can report them via GitHub Issues. For commercial support or prioritized help,
 contact info (at) zubanls.com.

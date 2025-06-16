@@ -15,6 +15,12 @@ ZubanLS’s default mode is designed to be functionally similar to Pyright.
 However, ZubanLS offers significantly better performance - running faster and
 using substantially less memory than Pyright.
 
+Pyright has limitations that Mypy does not. A notable example is that
+Pyright assigns Any in cases of
+[circular references](https://microsoft.github.io/pyright/#/mypy-comparison?id=circular-references),
+which can silently result in untyped code. It also skips certain checks in
+loops by design, missing true positives.
+
 Pyright additionally provides IDE features such as autocompletion,
 go-to-definition, and more. These capabilities are currently under development
 for ZubanLS and may take some time to be fully implemented.
