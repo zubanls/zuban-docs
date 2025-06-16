@@ -14,7 +14,7 @@ support for Python's {ref}`type system <type_features>`.
 
 ![ZubanLS Diagnostics](_static/vscode.png)
 
-ZubanLS is not open source, but it is free for most users. Small
+ZubanLS is not open source, but it is free for most users. Small and mid-sized
 projects — around 50,000 lines of code — can continue using it for free, even in
 commercial settings, after the beta and full release. Larger codebases will
 require a {ref}`commercial license <license>`.
