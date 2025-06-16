@@ -10,6 +10,9 @@ The non-Mypy-compatible mode currently behaves similarly to running `mypy
 However, it will likely begin type checking untyped code in the near future,
 gradually diverging further from Mypy's default behavior."
 
+In Mypy-compatible mode, ZubanLS passes over 95% of Mypy's relevant test suite,
+closely matching Mypy's behavior.
+
 If you're experiencing issues but are otherwise satisfied with performance, you
 can report them via GitHub Issues. For commercial support or prioritized help,
 contact info (at) zubanls.com.
