@@ -29,4 +29,5 @@ usage.md
 features.md
 license.md
 comparison.md
+changelog.md
 ```
