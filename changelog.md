@@ -7,6 +7,7 @@
     * Goto (definitions, declarations, implementations, type-definitions)
     * Hover
     * References / Document Highlights
+    * Rename
 * Add type inference for untyped params, when running `zmypy --no-mypy-compatible`.
   `def foo(x): return [x]` would be inferred as Callable[[T], list[T]]
 
