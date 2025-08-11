@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.19
+
+* Fix a lot of details around diagnostics to satisfy most conformance tests
+
 ## 0.0.18
 
 * Add language server (LSP) capabilities for
