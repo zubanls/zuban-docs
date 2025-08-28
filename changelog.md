@@ -10,7 +10,7 @@
 
 * Fix a lot of details around diagnostics to satisfy most conformance tests
 
-## 0.0.18 (2025-08-11)
+## 0.0.18 (2025-07-31)
 
 * Add language server (LSP) capabilities for
     * Completions
