@@ -65,8 +65,7 @@ with their corresponding PEPs.
 - Incremental checking - Only rechecks changed files for performance when
   running the language server
 - [LSP protocol](https://microsoft.github.io/language-server-protocol/specifications/specification-current/)
-  support - Diagnostics through Language Server Protocol (even if
-  other LSP features like completion aren't present).
+  support (diagnostics, completions, goto, rename, references, document highlights and hover)
 - Watch mode - Rechecks files automatically on change.
 - Works on **Linux** (x86-64, AArch64, ARMv7, i686), **Mac** (ARM & x86-64) and
   **Windows** (x86-64 and i686)

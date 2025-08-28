@@ -1,11 +1,11 @@
 # The Zuban Language Server
 
-ZubanLS is a Mypy-compatible, high-performance Python Language Server
-implemented in Rust, by the author of [Jedi](https://github.com/davidhalter/jedi).
+ZubanLS is a Mypy-compatible, high-performance Python Language Server and type
+checker implemented in Rust, by the author of
+[Jedi](https://github.com/davidhalter/jedi).
 
-Currently only diagnostics are supported, feel free to use the [Jedi Language
-Server](https://github.com/pappasam/jedi-language-server/) for autocompletion,
-goto and renames.
+Most relevant LSP features are supported. Features include diagnostics,
+completions, goto, references, rename, hover and document highlights.
 
 {ref}`Installing ZubanLS <installation_start>`
 
