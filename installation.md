@@ -1,7 +1,7 @@
 (installation_start)=
 # Installation
 
-You can install zubanls by using:
+You can install zuban by using:
 
 ```bash
 pip install zuban --break-system-packages --upgrade
@@ -12,11 +12,12 @@ third-party Python packages are actually installed.
 
 After installation, two executables will be available:
 
-- `zmypy` - A command-line tool compatible with Mypy usage (e.g., `zmypy --strict`)
-- `zubanls` - A Language Server compatible with any editor or IDE that supports the [Language Server Protocol (LSP)](https://microsoft.github.io/language-server-protocol/specifications/specification-current/)
+- `zuban` - Use `zuban check` for type checking and `zuban server` for the
+  [Language Server Protocol (LSP)](https://microsoft.github.io/language-server-protocol/specifications/specification-current/)
+- `zmypy` - An alias for `zuban mypy` that is compatible with Mypy usage (e.g., `zmypy --strict`)
 
 Installing the Language Server is straightforward. In most editors, you can
-configure `zubanls` directly as the Language Server executable. Here are
+configure `zuban` directly as the Language Server executable. Here are
 example configs for some IDE's/Editors.
 
 ## VSCode
@@ -40,7 +41,7 @@ After [installing](installation_start) Zuban, add LSP support using
 ```vim
 au User lsp_setup call lsp#register_server({
     \ 'name': 'Zuban',
-    \ 'cmd': ['zubanls'],
+    \ 'cmd': ['zuban', 'server'],
     \ 'allowlist': ['python'],
     \ })
 ```
@@ -56,5 +57,6 @@ name = "python"
 language-servers = ["zuban"]
 
 [language-server.zuban]
-command = "zubanls"
+command = "zuban"
+args = ["server"]
 ```
