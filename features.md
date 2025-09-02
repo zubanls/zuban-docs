@@ -1,6 +1,6 @@
 # Features
 
-By default, ZubanLS runs in a non-Mypy-compatible mode. If a Mypy configuration
+By default, Zuban runs in a non-Mypy-compatible mode. If a Mypy configuration
 is found in `mypy.ini` or `pyproject.toml`, it will switch to Mypy-compatible mode.
 Currently, false positives can be an issue, but this is expected to improve
 over time.
@@ -10,7 +10,7 @@ The non-Mypy-compatible mode currently behaves similarly to running `mypy
 However, it will likely begin type checking untyped code in the near future,
 gradually diverging further from Mypy's default behavior."
 
-In Mypy-compatible mode, ZubanLS passes over 95% of Mypy's relevant test suite,
+In Mypy-compatible mode, Zuban passes over 95% of Mypy's relevant test suite,
 closely matching Mypy's behavior.
 
 If you're experiencing issues but are otherwise satisfied with performance, you
@@ -22,7 +22,7 @@ contact info (at) zubanls.com.
 The full specification of the Python typing system can be found on
 [typing.python.org](https://typing.python.org/en/latest/spec/).
 Any deviations from this specification are considered bugs and will be
-addressed promptly. Below is a list of the features supported by ZubanLS, along
+addressed promptly. Below is a list of the features supported by Zuban, along
 with their corresponding PEPs.
 
 (type_features)=
@@ -72,7 +72,7 @@ with their corresponding PEPs.
 
 ### Performance
 
-- ZubanLS is written in Rust for high performance. It runs on a single core but
+- Zuban is written in Rust for high performance. It runs on a single core but
   is already over 20× faster than Mypy. Multi-core support is planned.
   existing performance.
 - Optimized to minimize memory usage.

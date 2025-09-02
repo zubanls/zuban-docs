@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'ZubanLS'
+project = 'Zuban'
 copyright = '2025, info (at) zubanls.com'
 author = 'David Halter'
 

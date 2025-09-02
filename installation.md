@@ -22,24 +22,24 @@ example configs for some IDE's/Editors.
 ## VSCode
 
 ```{note}
-   You **must** [install](installation_start) ZubanLS separately via pip before using the extension.
+   You **must** [install](installation_start) Zuban separately via pip before using the extension.
 ```
 
 Install the extension from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=zuban.zubanls).
 
 If you're using a virtual environment, make sure to activate it and start
-ZubanLS from the corresponding directory. VSCode integration is limited for
+Zuban from the corresponding directory. VSCode integration is limited for
 now, but future updates will aim to support virtual environment selection
 within the editor.
 
 ## VIM
 
-After [installing](installation_start) ZubanLS, add LSP support using
+After [installing](installation_start) Zuban, add LSP support using
 [vim-lsp](https://github.com/prabirshrestha/vim-lsp):
 
 ```vim
 au User lsp_setup call lsp#register_server({
-    \ 'name': 'ZubanLS',
+    \ 'name': 'Zuban',
     \ 'cmd': ['zubanls'],
     \ 'allowlist': ['python'],
     \ })
@@ -47,7 +47,7 @@ au User lsp_setup call lsp#register_server({
 
 ## Helix
 
-After [installing](installation_start) ZubanLS, add the following to
+After [installing](installation_start) Zuban, add the following to
 [languages.toml](https://docs.helix-editor.com/languages.html#languagestoml-files):
 
 ```toml
