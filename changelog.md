@@ -2,6 +2,11 @@
 
 ## Changes
 
+### 0.0.22 (2025-09-04)
+
+* `pyproject.toml` now supports `[tool.zuban]` for configuration
+* Various bug fixes
+
 ### 0.0.21 (2025-09-03)
 
 * Open Sourced with an AGPL license
