@@ -2,6 +2,17 @@
 
 ## Changes
 
+### 0.0.23 (2025-09-12)
+
+* Better virtualenv support: In case where no `$VIRTUAL_ENV` is found
+* `.pth` file support, this enables for example uv workspaces
+* Added colors to the command line
+* Support for `--pretty` and the `pretty = true` to have more infos about the
+  error location when running on the command line
+* Added support for `typing.LiteralString` and literal operations (e.g. `"a" +
+  "b"` would result in the literal `"ab"`
+* Added support for `__call__` in metaclasses
+
 ### 0.0.22 (2025-09-04)
 
 * `pyproject.toml` now supports `[tool.zuban]` for configuration
