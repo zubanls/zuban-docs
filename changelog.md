@@ -2,6 +2,14 @@
 
 ## Changes
 
+### 0.0.24 (2025-09-23)
+
+* Full support for TypedDict `extra_items`/`closed` ([PEP 728](https://peps.python.org/pep-0728/))
+* Support for reporting deprecated usages of classes/functions, by using `--enable-error-code deprecated`
+* Support for LiteralString and Literal operations, `"a" + "b"` would result in the type `Literal["ab"]`.
+* Support for the `TypeVar(..., infer_variance=True)` argument
+* Now all conformance tests are at least partially supported
+
 ### 0.0.23 (2025-09-12)
 
 * Better virtualenv support: In case where no `$VIRTUAL_ENV` is found
