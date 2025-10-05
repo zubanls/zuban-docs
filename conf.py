@@ -30,7 +30,7 @@ html_favicon = 'logo.svg'
 
 html_theme_options = {
     'github_user': 'zubanls',
-    'github_repo': 'zuban-docs',
+    'github_repo': 'zuban',
     'github_banner': True,  # Shows "Fork me on GitHub" banner
     'github_button': False,  # Shows GitHub button in sidebar
 }
