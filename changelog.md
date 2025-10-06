@@ -2,6 +2,12 @@
 
 ## Changes
 
+### 0.0.25 (2025-10-07)
+
+- Full support for pattern matching (`match` and `case` narrowing)
+- The `PYTHONPATH` and `MYPYPATH` environment variables are now used for the `sys.path`
+- Fixes for many crashes and bugs
+
 ### 0.0.24 (2025-09-23)
 
 * Full support for TypedDict `extra_items`/`closed` ([PEP 728](https://peps.python.org/pep-0728/))

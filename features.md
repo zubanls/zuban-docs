@@ -49,6 +49,9 @@ with their corresponding PEPs.
 - TypeVar/TypeVarTuple/ParamSpec defaults ([PEP 696](https://peps.python.org/pep-0696/))
 - Narrowing types with TypeGuard ([PEP 647](https://peps.python.org/pep-0647/))
   and TypeIs ([PEP 742](https://peps.python.org/pep-0742/))
+- Literal strings ([PEP 675](https://peps.python.org/pep-0675/)), note that
+  this is not implemented in Mypy
+- Marking deprecations using the type system ([PEP 702](https://peps.python.org/pep-0702/))
 
 ### General Code Understanding
 
@@ -82,9 +85,5 @@ with their corresponding PEPs.
 - Unused `# type: ignore` comments are not yet reported.
 - General plugin support is not planned; however, targeted plugins for popular
   libraries, such as Django, will be provided.
-- The match statement may result in names being assigned the type Any.
 - Function bodies using bounded TypeVar definitions (e.g., `TypeVar("T", str, bytes)`)
   are not currently type-checked. This limitation is unlikely to affect most users.
-- Literal strings ([PEP 675](https://peps.python.org/pep-0675/)), note that
-  this is also not implemented in Mypy
-- Marking deprecations using the type system ([PEP 702](https://peps.python.org/pep-0702/))
