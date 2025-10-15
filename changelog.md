@@ -2,6 +2,10 @@
 
 ## Changes
 
+### 0.1.1 (2025-10-15)
+
+- Added call signatures to LSP
+
 ### 0.1.0 (2025-10-10)
 
 - This is the Zuban Beta release, because it feels very stable now
