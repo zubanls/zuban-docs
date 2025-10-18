@@ -61,6 +61,11 @@ command = "zuban"
 args = ["server"]
 ```
 
+## Zed
+
+You should probably try this [inofficial
+extension](https://zed.dev/extensions/zuban) here.
+
 ## Emacs
 
 After [installing](installation_start) Zuban, add LSP support using
