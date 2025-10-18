@@ -65,3 +65,20 @@ args = ["server"]
 
 You should probably try this [inofficial
 extension](https://zed.dev/extensions/zuban) here.
+
+## Kate
+
+After [installing](installation_start) Zuban, add the following to
+`LSP Client` -> `User Server Settings`:
+
+```json
+{
+    "servers": {
+        "python": {
+            "command": ["zubanls"],
+            "url": "https://github.com/zubanls/zuban",
+            "highlightingModeRegex": "^Python$"
+        }
+    }
+}
+```
