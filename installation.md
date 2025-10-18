@@ -63,7 +63,7 @@ args = ["server"]
 
 ## Zed
 
-You should probably try this [inofficial
+You should probably try this [unofficial
 extension](https://zed.dev/extensions/zuban) here.
 
 ## Emacs
