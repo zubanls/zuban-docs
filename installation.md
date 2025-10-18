@@ -63,8 +63,22 @@ args = ["server"]
 
 ## Zed
 
-You should probably try this [inofficial
+You should probably try this [unofficial
 extension](https://zed.dev/extensions/zuban) here.
+
+
+## Emacs
+
+After [installing](installation_start) Zuban, add LSP support using
+[eglot](https://www.gnu.org/software/emacs/manual/html_mono/eglot.html):
+
+```elisp
+(use-package eglot
+  :config
+  (add-to-list 'eglot-server-programs
+               '((python-mode python-ts-mode) . ("zubanls"))))
+```
+
 
 ## Kate
 
@@ -81,4 +95,3 @@ After [installing](installation_start) Zuban, add the following to
         }
     }
 }
-```
