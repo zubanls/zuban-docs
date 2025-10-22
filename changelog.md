@@ -2,6 +2,14 @@
 
 ## Changes
 
+### 0.1.2 (2025-10-22)
+
+- Added musllinux builds to the PyPI release:
+  - `armv7-unknown-linux-musleabihf`
+  - `aarch64-unknown-linux-musl`
+  - `x86_64-unknown-linux-musl`
+  - `i686-unknown-linux-musl`
+
 ### 0.1.1 (2025-10-15)
 
 - Added call signatures to LSP
