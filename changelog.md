@@ -2,6 +2,10 @@
 
 ## Changes
 
+### 0.2.0 (2025-10-23)
+
+- Added Notebook support in LSP (completions, goto, rename, etc.)
+
 ### 0.1.2 (2025-10-22)
 
 - Added musllinux builds to the PyPI release:
