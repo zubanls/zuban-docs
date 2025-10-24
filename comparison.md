@@ -21,13 +21,6 @@ Pyright assigns Any in cases of
 which can silently result in untyped code. It also skips certain checks in
 loops by design, missing true positives.
 
-Pyright additionally provides IDE features such as autocompletion,
-go-to-definition, and more. These capabilities are currently under development
-for Zuban and may take some time to be fully implemented.
-In the meantime, you can use [Jedi](https://github.com/davidhalter/jedi) via
-[Jedi Language Server](https://github.com/pappasam/jedi-language-server/) to
-supplement Zuban with most features it does not yet support.
-
 ## ty / pyrefly
 
 Both type checkers are still in early alpha stages and currently lack several
