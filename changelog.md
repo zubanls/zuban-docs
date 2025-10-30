@@ -2,6 +2,11 @@
 
 ## Changes
 
+### 0.2.1 (2025-10-30)
+
+- Implemented semantic colors and selection ranges (LSP)
+- Fixed a problem that caused Zuban to not terminate
+
 ### 0.2.0 (2025-10-23)
 
 - Added Notebook support in LSP (completions, goto, rename, etc.)
