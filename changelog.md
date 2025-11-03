@@ -2,6 +2,10 @@
 
 ## Changes
 
+### 0.2.2 (2025-11-03)
+
+- Bug fixes
+
 ### 0.2.1 (2025-10-30)
 
 - Implemented semantic colors and selection ranges (LSP)
