@@ -2,6 +2,11 @@
 
 ## Changes
 
+### 0.2.3 (2025-11-17)
+
+- Added autoimport actions (LSP)
+- Better documentation Markdown formatting (LSP)
+
 ### 0.2.2 (2025-11-03)
 
 - Bug fixes
