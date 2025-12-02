@@ -2,6 +2,14 @@
 
 ## Changes
 
+### 0.3.0 (2025-12-02)
+
+- Add inlay hints (LSP)
+- Django model support, implements type checking and completions (LSP)
+- Added autocompletion resolve, which means documentation for completion items is now available (LSP)
+- Added support for Conda (that `CONDA_PREFIX` is now recognized)
+- Many fixes for crashes
+
 ### 0.2.3 (2025-11-17)
 
 - Added autoimport actions (LSP)
