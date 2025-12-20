@@ -2,6 +2,10 @@
 
 ## Changes
 
+### 0.4.0 (2025-12-20)
+
+- Get a lot closer to passing conformance tests
+
 ### 0.3.0 (2025-12-02)
 
 - Add inlay hints (LSP)
