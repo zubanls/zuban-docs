@@ -2,6 +2,14 @@
 
 ## Changes
 
+### 0.4.2 (2026-01-16)
+
+- Bugfixes
+
+### 0.4.1 (2025-12-27)
+
+- Bugfixes
+
 ### 0.4.0 (2025-12-20)
 
 - Get a lot closer to passing conformance tests
