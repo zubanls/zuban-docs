@@ -82,14 +82,42 @@ Zuban supports both Mypy config and it's own entry in `pyproject.toml`:
 strict = true
 disallow_untyped_defs = true
 warn_unreachable = true
+allow_untyped_globals = false
+check_untyped_defs = false
+follow_untyped_imports = true
+exclude_gitignore = true
+# And many more Mypy options
 ```
 
-We still need to document the exact options possible, but you can use most
-configuration options available in Mypy.
+Like the options above, you can use most configuration options [available in
+Mypy](https://mypy.readthedocs.io/en/stable/config_file.html).
 
-If you are a Mypy user you can leave your Mypy
- [config file options](https://mypy.readthedocs.io/en/stable/config_file.html)
- in place and Zuban should pick up your Mypy configuration.
+Zuban adds the following flags to all the Mypy offers:
+
+```
+[tool.zuban]
+mode = "default"  # Defaults to default, but can be "mypy" as well.
+untyped_strict_optional = true  # Recommended for untyped code
+untyped_function_return_mode = "inferred" # Or "any" for Mypy's behavior or "advanced"
+```
+
+If you are a Mypy user you can leave your Mypy [config file
+options](https://mypy.readthedocs.io/en/stable/config_file.html) in place and
+Zuban should pick up your Mypy configuration.
+
+It is also possible to use both the old Mypy config and new Zuban configuration like this:
+
+```
+[tool.zuban]
+check_untyped_defs = true
+
+[tool.mypy]
+# Your old Mypy config
+strict = true
+```
+
+Keep in mind that by adding the `[tool.zuban]` section, the {ref}`mode
+<usage-modes>` might change.
 
 ## Dealing with the sys.path
 
