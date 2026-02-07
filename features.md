@@ -1,21 +1,12 @@
 # Features
 
-By default, Zuban runs in a non-Mypy-compatible mode. If a Mypy configuration
-is found in `mypy.ini` or `pyproject.toml`, it will switch to Mypy-compatible mode.
-Currently, false positives can be an issue, but this is expected to improve
-over time.
-
-The non-Mypy-compatible mode currently behaves similarly to running `mypy
---allow-redefinition-new --local-partial-types --allow-untyped-globals`.
-However, it will likely begin type checking untyped code in the near future,
-gradually diverging further from Mypy's default behavior."
-
-In Mypy-compatible mode, Zuban passes over 95% of Mypy's relevant test suite,
-closely matching Mypy's behavior.
+Zuban passes over 95% of Mypy's relevant test suite, closely matching Mypy's
+behavior. Zuban has full LSP (Language Server Protocol) support and you should
+therefore be able to use Zuban in any LSP compatible editor.
 
 If you're experiencing issues but are otherwise satisfied with performance, you
-can report them via GitHub Issues. For commercial support or prioritized help,
-contact info (at) zubanls.com.
+can report them via [GitHub Issues](https://github.com/zubanls/zuban/issues).
+For commercial support or prioritized help, contact info (at) zubanls.com.
 
 ## Features
 

@@ -4,10 +4,10 @@ There are two main ways to use Zuban, either as a {ref}`type checker <usage-type
 on the command line like `zuban check` or as a
 {ref}`language server <usage-language-server>` in your IDE/Editor.
 
-{ref}`Configuration <usage-configuration>` is possible in `pyproject.toml` or `mypy.ini`.
 There are two basic {ref}`modes <usage-modes>` for running Zuban, the `default`
 mode and the `mypy`-compatible mode. Zuban tries to find the optimal mode for
-you depending on your config.
+you depending on your config. {ref}`Configuration <usage-configuration>` is
+possible with `pyproject.toml` or `mypy.ini`.
 
 You can use both `zuban: ignore` and `type: ignore`. It is possible to filter
 errors like you would in Mypy: `zuban: ignore[attr-defined]`. Zuban is fully
@@ -92,20 +92,25 @@ exclude_gitignore = true
 Like the options above, you can use most configuration options [available in
 Mypy](https://mypy.readthedocs.io/en/stable/config_file.html).
 
-Zuban adds the following flags to all the Mypy offers:
+Zuban adds the following configuration options:
 
 ```
 [tool.zuban]
-mode = "default"  # Defaults to default, but can be "mypy" as well.
-untyped_strict_optional = true  # Recommended for untyped code
-untyped_function_return_mode = "inferred" # Or "any" for Mypy's behavior or "advanced"
+mode = "default"  # Or "mypy"
+
+# Recommended (and the default) for untyped code
+untyped_strict_optional = true
+
+# Mypy's default is "any", Zuban's "inferred"
+untyped_function_return_mode = "inferred"
 ```
 
 If you are a Mypy user you can leave your Mypy [config file
 options](https://mypy.readthedocs.io/en/stable/config_file.html) in place and
 Zuban should pick up your Mypy configuration.
 
-It is also possible to use both the old Mypy config and new Zuban configuration like this:
+It is also possible to use both the old Mypy config and new Zuban configuration
+together like this:
 
 ```
 [tool.zuban]
