@@ -2,6 +2,20 @@
 
 ## Changes
 
+### 0.5.0 (2026-02-07)
+
+- By default enable --untyped-strict-optional in the default mode. This reduces
+  a lot of false positives in untyped code.
+- Fixed many issues around untyped code
+  - Muted errors for example around incomplete list generics, which are common
+    in untyped code.
+  - Does not infer generics for params anymore by default, this is too noisy for now.
+- `try: ... except AttributeError` now mutes errors in the case where an
+  attribute exists on some parts of the union, but not on others.
+- In addition to specifying `type: ignore` you can now use `zuban: ignore`
+- Changed `--mypy-compatible` to `--mode mypy` and `--no-mypy-compatible` to `--mode default`
+- It is now possible to specify `mode = "mypy"` or `mode = "default"` in `pyproject.toml`
+
 ### 0.4.2 (2026-01-16)
 
 - Bugfixes
