@@ -24,7 +24,7 @@ loops by design, missing true positives.
 ## ty / pyrefly
 
 Both type checkers are still in early alpha stages and currently lack several
-fundamental {ref}`type system features <type_features>` that Zuban currently
+fundamental {ref}`type system features <type-features>` that Zuban currently
 supports.
 
 Progress can be tracked on the [conformance tests](https://htmlpreview.github.io/?https://github.com/python/typing/blob/main/conformance/results/results.html).

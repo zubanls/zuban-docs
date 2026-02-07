@@ -7,13 +7,14 @@ compared to Ty and Pyrefly. It offers both a PyRight-like mode and a
 Mypy-compatible mode, which behaves just like Mypy; supporting the same config
 files, command-line flags, and error messages.
 
-Most important LSP features are supported. Features include diagnostics,
-completions, goto, references, rename, hover and document highlights.
+Zuban has full LSP (Language Server Protocol) support. Features include
+diagnostics, completions, goto, references, rename, hover and document
+highlights.
 
 {ref}`Installing Zuban <installation_start>`
 
 Zuban passes over 95% of Mypy’s relevant test suite and offers comprehensive
-support for Python's {ref}`type system <type_features>`.
+support for Python's {ref}`type system <type-features>`.
 
 ![Zuban Diagnostics](_static/vscode.png)
 

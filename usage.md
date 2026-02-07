@@ -1,23 +1,19 @@
 # Usage
 
-## Configuration
+There are two main ways to use Zuban, either as a {ref}`type checker <usage-type-checking>`
+on the command line like `zuban check` or as a
+{ref}`language server <usage-language-server>` in your IDE/Editor.
 
-Zuban supports both Mypy config and it's own entry in `pyproject.toml`:
+{ref}`Configuration <usage-configuration>` is possible in `pyproject.toml` or `mypy.ini`.
+There are two basic {ref}`modes <usage-modes>` for running Zuban, the `default`
+mode and the `mypy`-compatible mode. Zuban tries to find the optimal mode for
+you depending on your config.
 
-```toml
-[tool.zuban]
-strict = true
-disallow_untyped_defs = true
-warn_unreachable = true
-```
+You can use both `zuban: ignore` and `type: ignore`. It is possible to filter
+errors like you would in Mypy: `zuban: ignore[attr-defined]`. Zuban is fully
+[standards compliant](https://htmlpreview.github.io/?https://github.com/python/typing/blob/main/conformance/results/results.html).
 
-We still need to document the exact options possible, but you can use most
-configuration options available in Mypy.
-
-If you are a Mypy user you can leave your Mypy
- [config file options](https://mypy.readthedocs.io/en/stable/config_file.html)
- in place and Zuban should pick up your Mypy configuration.
-
+(usage-type-checking)=
 ## Type Checking / Command Line
 
 For type checking there are three fundamental command line options:
@@ -42,10 +38,58 @@ zuban mypy --warn-unreachable
 zmypy --disallow-untyped-defs
 ```
 
+(usage-language-server)=
 ## Language Server
 
 To use zubanls, simply [install](installation_start) it, add to your editor of
 choice and start coding. There are currently no command line options.
+
+(usage-modes)=
+## Modes
+
+Unless you run `zuban mypy`, Zuban will try to guess the mode in the following
+order:
+
+1. An explicit mode: `zuban check --mode default`
+2. An explicit mode in `pyproject.toml` in `[tool.zuban]` like `mode = "mypy"` or `mode = "default"`.
+3. A precence of the key `[tool.zuban]` in `pyproject.toml` implies the mode `default`.
+4. A precense of `[tool.zuban]` in `pyproject.toml` or a `mypy.ini` file imply the mode `mypy`.
+5. As a fallback the `default` mode is used.
+
+It is recommended to use the default mode unless you are converting from a Mypy
+codebase. The `default` mode works mostly like Mypy with different default flags.
+These are the differences:
+
+- The following command line options are enabled: `--allow-untyped-globals`,
+  `--check-untyped-defs`, `--allow-redefinition`, `--local-partial-types`,
+  `--warn-unreachable`, `--no-warn-no-return`, `--follow-untyped-imports`,
+  `--exclude-gitignore`.
+- Zuban uses unions instead of what Mypy calls "Joins". `[1, ""]` is inferred as `list[int | str]` in   Zuban's default mode instead of `list[object]`.
+- Untyped code is checked by default and its return types are inferred. Zuban
+  by default also enables `--untyped-strict-optional`, which is similar to
+  `--strict-optional` for untyped code. Issues around unions with None are very
+  typical for untyped code and are therefore not reported by default. Untyped
+  code is a concept introduced by Mypy where a function has neither typed
+  parameters nor a typed return value.
+
+(usage-configuration)=
+## Configuration
+
+Zuban supports both Mypy config and it's own entry in `pyproject.toml`:
+
+```toml
+[tool.zuban]
+strict = true
+disallow_untyped_defs = true
+warn_unreachable = true
+```
+
+We still need to document the exact options possible, but you can use most
+configuration options available in Mypy.
+
+If you are a Mypy user you can leave your Mypy
+ [config file options](https://mypy.readthedocs.io/en/stable/config_file.html)
+ in place and Zuban should pick up your Mypy configuration.
 
 ## Dealing with the sys.path
 
