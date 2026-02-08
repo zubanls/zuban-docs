@@ -52,8 +52,8 @@ order:
 
 1. An explicit mode: `zuban check --mode default`
 2. An explicit mode in `pyproject.toml` in `[tool.zuban]` like `mode = "mypy"` or `mode = "default"`.
-3. A precence of the key `[tool.zuban]` in `pyproject.toml` implies the mode `default`.
-4. A precense of `[tool.zuban]` in `pyproject.toml` or a `mypy.ini` file imply the mode `mypy`.
+3. A presence of the key `[tool.zuban]` in `pyproject.toml` implies the mode `default`.
+4. A presence of `[tool.zuban]` in `pyproject.toml` or a `mypy.ini` file imply the mode `mypy`.
 5. As a fallback the `default` mode is used.
 
 It is recommended to use the default mode unless you are converting from a Mypy
