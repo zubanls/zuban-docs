@@ -2,6 +2,12 @@
 
 ## Changes
 
+### 0.5.1 (2026-02-09)
+
+- Implemented Mypy's `ignore_errors = true` correctly. This makes it possible
+  to avoid showing diagnostics in a LSP process.
+- Fixed the sys path when site-packages are used in a default environment
+
 ### 0.5.0 (2026-02-07)
 
 - By default enable --untyped-strict-optional in the default mode. This reduces
