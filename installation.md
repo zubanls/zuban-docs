@@ -46,6 +46,22 @@ au User lsp_setup call lsp#register_server({
     \ })
 ```
 
+## Neovim
+
+After [installing](installation_start) Zuban, add LSP support using
+[neovim-lsp](https://neovim.io/doc/user/lsp.html):
+
+```lua
+vim.lsp.config('zubanls', {
+	name = "ZubanLS",
+	cmd = { "zuban", "server" },
+	root_markers = { "pyproject.toml", ".git" },
+	filetypes = { "python" },
+})
+
+vim.lsp.enable("zubanls")
+```
+
 ## Helix
 
 After [installing](installation_start) Zuban, add the following to
