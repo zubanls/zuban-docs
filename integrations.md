@@ -49,8 +49,8 @@ with `language: system`, make sure Zuban is installed in a previous step of the 
 
 ### prek
 
-Zuban can also be used with [prek](https://prek.j178.dev/). If you're not using the new
-format (`prek.toml`), you can follow a similar local-repository setup:
+Zuban can also be used with [prek](https://prek.j178.dev/). If you're using prek
+configuration file (`prek.toml`), you can follow a similar local-repository setup:
 
 ```toml
 [[repos]]
