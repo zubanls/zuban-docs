@@ -21,8 +21,9 @@ the state of the codebase.
 
 ### pre-commit
 
-Zuban can be integrated into a `pre-commit` workflow as a local hook. This is
-useful when you want to run a full-project type check before commits or in CI.
+Zuban can be integrated into a [pre-commit](https://pre-commit.com/) workflow as a
+local hook. This is useful when you want to run a full-project type check before
+commits or as part of a CI pipeline.
 
 ```yaml
 repos:
@@ -35,15 +36,21 @@ repos:
         pass_filenames: false
 ```
 
-- `language: system`: tells pre-commit to use the system Python environment where Zuban is installed.
-- `pass_filenames: false`: ensures Zuban runs on the entire project rather than just the staged files.
+- `language: system`: uses the system Python environment where Zuban is installed.
+- `pass_filenames: false`: runs Zuban on the entire project instead of only the staged files.
 
 These options can be adjusted depending on your workflow or environment.
 
+```{note}
+When using `pre-commit` in CI (for example, the
+[official pre-commit GitHub Action](https://github.com/marketplace/actions/pre-commit))
+with `language: system`, make sure Zuban is installed in a previous step of the workflow.
+```
 
 ### prek
 
-Zuban can also be used with `prek`, following a similar local-repository setup.
+Zuban can also be used with [prek](https://prek.j178.dev/). If you're not using the new
+format (`prek.toml`), you can follow a similar local-repository setup:
 
 ```toml
 [[repos]]
@@ -59,4 +66,6 @@ hooks = [
 ]
 ```
 
-The same configuration principles apply for prek: `language` specifies the environment, and `pass_filenames` controls which files are checked.
+The same configuration principles apply to prek: `language` specifies the execution
+environment, and `pass_filenames` controls whether Zuban runs on the full project or
+only on selected files.
