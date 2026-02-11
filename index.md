@@ -30,5 +30,6 @@ usage.md
 features.md
 license.md
 comparison.md
+integrations.md
 changelog.md
 ```
