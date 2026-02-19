@@ -2,6 +2,14 @@
 
 ## Changes
 
+### 0.6.0 (2026-02-19)
+
+- Add pytest fixture inference, completions and goto
+- Added the code action to add `# type: ignore[<error-code>]` at the end of the
+  line when errors are present
+- Code actions are now more gracious and give you actions for the full line
+  even if the cursor is not directly on it
+
 ### 0.5.1 (2026-02-09)
 
 - Implemented Mypy's `ignore_errors = true` correctly. This makes it possible

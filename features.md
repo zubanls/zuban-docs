@@ -60,6 +60,7 @@ with their corresponding PEPs.
   running the language server
 - [LSP protocol](https://microsoft.github.io/language-server-protocol/specifications/specification-current/)
   support (diagnostics, completions, goto, rename, references, document highlights and hover)
+- Code action support (Auto imports, adding `# type: ignore[<some-code>]`)
 - Watch mode - Rechecks files automatically on change.
 - Works on **Linux** (x86-64, AArch64, ARMv7, i686), **Mac** (ARM & x86-64) and
   **Windows** (x86-64 and i686)

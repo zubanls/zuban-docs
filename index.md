@@ -8,8 +8,8 @@ Mypy-compatible mode, which behaves just like Mypy; supporting the same config
 files, command-line flags, and error messages.
 
 Zuban has full LSP (Language Server Protocol) support. Features include
-diagnostics, completions, goto, references, rename, hover and document
-highlights.
+diagnostics, completions, goto, references, rename, hover, auto-imports and
+document highlights.
 
 {ref}`Installing Zuban <installation_start>`
 
