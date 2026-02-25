@@ -2,6 +2,16 @@
 
 ## Changes
 
+All of these changes are highlights, there's always smaller bugfixes included.
+
+### 0.6.1 (2026-02-25)
+
+- Using zmypy is now possible from a subdir. It respects relative paths and
+  will typecheck the whole project if no explicit paths are given
+- Fixed a problematic bug when working with nested workspaces. This was often
+  problematic when using uv
+- Added a few more cases where inlay hints are useful when generics are present (LSP)
+
 ### 0.6.0 (2026-02-19)
 
 - Add pytest fixture inference, completions and goto
