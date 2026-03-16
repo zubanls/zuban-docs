@@ -4,6 +4,25 @@
 
 All of these changes are highlights, there's always smaller bugfixes included.
 
+### 0.6.2 (2026-03-16)
+
+- Union matching for large literal unions (> 100 items) is now not exponential
+  anymore and therefor exponentially faster :-)
+- sys.path improvements (mostly for uv users):
+  - The `src/` subfolder in a project is now added to the path
+  - Nested folders with their own local imports are now also possible. The
+    parent folder of the most outer `__init__.py` is assumed to be the package
+    name
+  - Added `--explicit-package-bases`, which Mypy also uses to disable these heuristics
+  - `$VIRTUAL_ENV` now has lower priority than searching local folders for
+    virtual envs. The problem is that this variable is quite unreliable in some
+    cases, especially when zuban is run from a virtualenv itself
+- Better keyword argument completions (LSP)
+- Zuban is in general about 30% faster for large projects:
+  - Imports are now a lot faster in large projects
+  - The parser is now faster by a few percent
+- The parser had stalls due to exponential reparsing, which is now fixed
+
 ### 0.6.1 (2026-02-25)
 
 - Using zmypy is now possible from a subdir. It respects relative paths and
