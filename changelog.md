@@ -4,6 +4,26 @@
 
 All of these changes are highlights, there's always smaller bugfixes included.
 
+### 0.7.0 (2026-04-06)
+
+- **Breaking:** The default mode is now "default" even if there is Mypy
+  specific config (e.g. mypy.ini). Previously the "mypy" mode would be chosen
+  in such cases. Mypy config is still read, though. This does not matter if you
+  run `zmypy` or `zuban mypy`. However if you want to use the language server
+  you may want to add a `mode = "mypy"` to the `[tool.zuban]` section in `pyproject.toml`.
+  The reason for this change is that the previous logic was too complicated for
+  users to understand. Now it's pretty simple: The mode is always "default"
+  except if it's explicitly chosen otherwise.
+- Django `*_id` attributes and completions now work
+- Error codes for overrides do now match Mypy's error codes closer
+- Better hover for type aliases, type variables (LSP)
+- References are now sorted in a more useful way (LSP)
+- Removed the undocumented `zubanls` executable which was documented only in
+  very early releases (before 0.0.20)
+- Improved support for `typing_extensions` usages
+- Improved speed a lot for some TypedDict matching
+- Fixed a lot of crashes
+
 ### 0.6.2 (2026-03-16)
 
 - Union matching for large literal unions (> 100 items) is now not exponential
