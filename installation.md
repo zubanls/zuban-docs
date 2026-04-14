@@ -109,3 +109,26 @@ After [installing](installation_start) Zuban, add the following to
         }
     }
 }
+```
+
+## Sublime Text
+
+After [installing](installation_start) Zuban and the
+[Sublime-LSP](https://github.com/sublimelsp/LSP/) package, update
+the LSP.sublime-settings with the following snippet:
+
+```json
+{
+    "clients": {
+        "zuban": {
+            "enabled": true,
+            "command": ["uvx", "zuban@latest", "server"],
+            "selector": "source.python, text.shebang"
+        }
+    }
+}
+```
+
+Note the above makes use of [uvx](https://docs.astral.sh/uv/getting-started/installation/)
+for managing and running Zuban. Should you wish to not use `uv`, adjust the `command`
+to point to the Zuban CLI.
