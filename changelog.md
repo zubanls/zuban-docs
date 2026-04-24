@@ -4,6 +4,16 @@
 
 All of these changes are highlights, there's always smaller bugfixes included.
 
+### 0.7.1 (2026-04-25)
+
+- Basic support for template strings (Python 3.14 `t"..."` syntax)
+- Upgrade typeshed
+- Completions in comments (LSP)
+- Implement `disjoint_base` (PEP 800)
+- Implement conditional fields for NamedTuple and TypedDict
+- Implement shell expansion for `mypy_path` in config
+- Fix finding typeshed for Debian based systems if installed as root
+
 ### 0.7.0 (2026-04-06)
 
 - **Breaking:** The default mode is now "default" even if there is Mypy

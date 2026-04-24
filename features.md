@@ -43,6 +43,8 @@ with their corresponding PEPs.
 - Literal strings ([PEP 675](https://peps.python.org/pep-0675/)), note that
   this is not implemented in Mypy
 - Marking deprecations using the type system ([PEP 702](https://peps.python.org/pep-0702/))
+- Disjoint bases ([PEP 800])
+- and probably more that have been omitted here
 
 ### General Code Understanding
 
