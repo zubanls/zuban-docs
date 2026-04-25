@@ -16,6 +16,9 @@ Any deviations from this specification are considered bugs and will be
 addressed promptly. Below is a list of the features supported by Zuban, along
 with their corresponding PEPs.
 
+The [conformance tests](https://htmlpreview.github.io/?https://github.com/python/typing/blob/main/conformance/results/results.html)
+show the current compliance with the spec for the different type checkers.
+
 (type-features)=
 ### Type System Support
 
