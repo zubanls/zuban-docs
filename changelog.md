@@ -4,6 +4,11 @@
 
 All of these changes are highlights, there's always smaller bugfixes included.
 
+### 0.7.2 (2026-05-03)
+
+- Implement sentinels
+- Fixes an annoying regression around abstractmethods
+
 ### 0.7.1 (2026-04-25)
 
 - Basic support for template strings (Python 3.14 `t"..."` syntax)
