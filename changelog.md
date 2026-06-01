@@ -4,6 +4,30 @@
 
 All of these changes are highlights, there's always smaller bugfixes included.
 
+### 0.8.0 (2026-06-01)
+
+This release is only relevant for LSP (language server protocol) related
+changes. The type checker was not changed.
+
+- Zuban now uses heuristics for completions, goto, hover and signatures. This
+  improves completions by a lot for untyped code. For example Zuban is now able
+  to complete both of these:
+
+  ```
+  def foo(x):
+    x.  # Zuban type checking thinks this is Any, but completes `list`,
+        # because it searches call sites.
+    return x[0]
+
+  foo(['']).  # Zuban type checking thinks that this is Any, but
+              # completes `str`, because it follows the function call.
+  ```
+- The sys path for LSP does now match what `zuban check` would find. Previously
+  Zuban did just believe the LSP roots. However LSP clients are often wrong.
+  The LSP roots are now only used as a hint.
+- Introduced many small improvements that are part of Jedi's tests. Now Zuban
+  passes about 92% of Jedi's tests, where previously it would pass only 80%.
+
 ### 0.7.2 (2026-05-03)
 
 - Implement sentinels
