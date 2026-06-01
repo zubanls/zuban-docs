@@ -15,12 +15,14 @@ changes. The type checker was not changed.
 
   ```
   def foo(x):
-    x.  # Zuban type checking thinks this is Any, but completes `list`,
+    x.  # Zuban type checking thinks this
+        # is Any, but completes `list`,
         # because it searches call sites.
     return x[0]
 
-  foo(['']).  # Zuban type checking thinks that this is Any, but
-              # completes `str`, because it follows the function call.
+  foo(['']).  # Zuban type checking thinks that this
+              # is Any, but completes `str`, because
+              # it follows the function call.
   ```
 - The sys path for LSP does now match what `zuban check` would find. Previously
   Zuban did just believe the LSP roots. However LSP clients are often wrong.
