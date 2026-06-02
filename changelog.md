@@ -29,6 +29,10 @@ changes. The type checker was not changed.
   The LSP roots are now only used as a hint.
 - Introduced many small improvements that are part of Jedi's tests. Now Zuban
   passes about 92% of Jedi's tests, where previously it would pass only 80%.
+- Zuban LSP works now in functions that Zuban/Mypy would typically not check
+  because of the (default) flag `--no-check-untyped-defs`.
+- Zuban completions and goto now work on third-party modules that have no
+  py.typed module inside them and are considered to be Any by the type checker.
 
 ### 0.7.2 (2026-05-03)
 
