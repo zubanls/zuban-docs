@@ -7,7 +7,7 @@ All of these changes are highlights, there's always smaller bugfixes included.
 ### 0.8.1 (2026-06-08)
 
 - Adding support for some `initializationOptions` that are used in the
-  upcomming VSCode plugin:
+  new [VSCode plugin](https://marketplace.visualstudio.com/items?itemName=zuban.zubanls):
   - `typeCheckingMode` can be `auto` (default), `off`, `default` or `mypy`.
     This is especially useful to disable type checking.
   - `disableLanguageServices` a boolean to disable all language services except
