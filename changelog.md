@@ -4,6 +4,22 @@
 
 All of these changes are highlights, there's always smaller bugfixes included.
 
+### 0.8.1 (2026-06-08)
+
+- Adding support for some `initializationOptions` that are used in the
+  upcomming VSCode plugin:
+  - `typeCheckingMode` can be `auto` (default), `off`, `default` or `mypy`.
+    This is especially useful to disable type checking.
+  - `disableLanguageServices` a boolean to disable all language services except
+    type checking.
+  - `diagnosticMode` can be `open-files-only` (default) or `workspace`. This
+    makes Zuban report more errors in the workspace case.
+  - `pythonExecutable` a string (path) to the python executable of an
+    environment. The exact same option is available when executing
+    `zuban check --python-executable <path>`.
+- Adding a custom status API that is used in the new VSCode plugin.
+- Added an sdist release (to PyPI)
+
 ### 0.8.0 (2026-06-01)
 
 This release is only relevant for LSP (language server protocol) related
