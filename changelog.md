@@ -4,6 +4,10 @@
 
 All of these changes are highlights, there's always smaller bugfixes included.
 
+### 0.8.2 (2026-06-09)
+
+- Added better support for `pip install -t`
+
 ### 0.8.1 (2026-06-08)
 
 - Adding support for some `initializationOptions` that are used in the
