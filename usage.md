@@ -39,10 +39,22 @@ zmypy --disallow-untyped-defs
 ```
 
 (usage-language-server)=
-## Language Server
+## Language Server (LSP)
 
 To use zubanls, simply [install](installation_start) it, add to your editor of
 choice and start coding. There are currently no command line options.
+
+There are a few LSP `initializationOptions` that can be used:
+
+- `typeCheckingMode` can be `auto` (default), `off`, `default` or `mypy`.
+  This is especially useful to disable type checking.
+- `disableLanguageServices` a boolean to disable all language services except
+  type checking.
+- `diagnosticMode` can be `open-files-only` (default) or `workspace`. This
+  makes Zuban report more errors in the workspace case.
+- `pythonExecutable` a string (path) to the python executable of an
+  environment. The exact same option is available when executing
+  `zuban check --python-executable <path>`.
 
 (usage-modes)=
 ## Modes
