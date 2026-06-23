@@ -4,6 +4,19 @@
 
 All of these changes are highlights, there's always smaller bugfixes included.
 
+### 0.9.0 (2026-06-23)
+
+- **Breaking:** The mode selection had bugs in some cases. Now the mode
+  selection is what was promised in 0.7.0: "default" by default when running
+  `zuban check` and "mypy" when running `zuban mypy`. The language server uses
+  the new mode "auto" that tries to detect Mypy settings. 0.7.0 tried to do
+  this already but had some bugs. These are now fixed. There's an explanation
+  at {ref}`modes <usage-modes>`.
+- Many bugfixes for typechecking
+- Added `--extra-search-paths`
+- Added Mypy's `--custom-typeshed-dir`
+- Added `--mode auto` and `mode = "auto"` in the zuban config
+
 ### 0.8.2 (2026-06-09)
 
 - Added better support for `pip install -t`

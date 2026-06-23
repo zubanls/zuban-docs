@@ -59,18 +59,26 @@ There are a few LSP `initializationOptions` that can be used:
 (usage-modes)=
 ## Modes
 
-Unless you run `zuban mypy`, Zuban will try to guess the mode in the following
-order:
+Zuban has two different fundamental modes: `default` and `mypy`. The `mypy`
+mode tries to be as close as possible to Mypy and the `default` mode tries to
+be as useful as possible and fixes a couple of issues where Mypy is probably
+not working optimal due to backwards compatibility. Most changes in the default
+mode concern defaults for flags. Mypy for example does not check untyped code
+(functions without annotations), whereas Zuban sets `check_untyped_defs = true`
+by default.
+
+Zuban tries to lookup the mode in the following order:
 
 1. An explicit mode: `zuban check --mode default`
 2. An explicit mode in `pyproject.toml` in `[tool.zuban]` like `mode = "mypy"` or `mode = "default"`.
-3. A presence of the key `[tool.zuban]` in `pyproject.toml` implies the mode `default`.
-4. A presence of `[tool.mypy]` in `pyproject.toml` or a `mypy.ini` file imply the mode `mypy`.
-5. As a fallback the `default` mode is used.
+3. Running `zuban check` on the command line implies the mode default. `zuban mypy` always runs in mode `mypy`.
+4. When using a language server or `zuban check --mode=auto` the following additional steps apply:
+   - A presence of the key `[tool.zuban]` in `pyproject.toml` implies the mode `default`.
+   - A presence of `[tool.mypy]` in `pyproject.toml` or a `mypy.ini` file imply the mode `mypy`.
+   - As a fallback the `default` mode is used.
 
 It is recommended to use the default mode unless you are converting from a Mypy
-codebase. The `default` mode works mostly like Mypy with different default flags.
-These are the differences:
+codebase. These are the differences:
 
 - The following command line options are enabled: `--allow-untyped-globals`,
   `--check-untyped-defs`, `--allow-redefinition`, `--local-partial-types`,
