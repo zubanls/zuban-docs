@@ -171,6 +171,19 @@ PYTHONPATH="src:src2/nested" zuban check
 
 The same is also possible with `MYPYPATH`.
 
+## Configuration Examples
+
+### Disable Type Checking
+
+You can disable type checking altogether and reenable it for specific modules:
+```toml
+[tool.zuban]
+ignore_errors = true
+[[tool.mypy.overrides]]
+module = 'm'
+ignore_errors = false
+```
+
 ## Logging
 
 To enable logging you can set the environment variable `ZUBAN_LOG_FILE=<some-file>`.
