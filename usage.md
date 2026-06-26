@@ -184,6 +184,9 @@ module = 'm'
 ignore_errors = false
 ```
 
+Alternatively you can also disable type checking your editor only by setting
+`typeCheckingMode="off"` in the LSP [initialization options](usage-language-server)
+
 ## Logging
 
 To enable logging you can set the environment variable `ZUBAN_LOG_FILE=<some-file>`.
