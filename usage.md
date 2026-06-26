@@ -173,6 +173,7 @@ The same is also possible with `MYPYPATH`.
 
 ## Configuration Examples
 
+(disable-type-checking)=
 ### Disable Type Checking
 
 You can disable type checking altogether and reenable it for specific modules:
