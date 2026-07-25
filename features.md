@@ -62,7 +62,7 @@ Zuban implements a comprehensive suite of LSP features, including:
 - Semantic tokens
 - Notebook support
 
-Formatting is out of scope - use a dedicated formatting tool like Ruff or Black.
+Formatting is out of scope as Zuban is primarily a typechecker - use a dedicated formatting tool like Ruff or Black.
 
 <details id="lsp-capability-list">
 <summary><strong>Full capability list (click to expand)</strong></summary>
@@ -81,24 +81,25 @@ Formatting is out of scope - use a dedicated formatting tool like Ruff or Black.
 - ✅ [`textDocument/documentHighlight`][documenthighlight]
 - ✅ [`textDocument/documentSymbol`][documentsymbol]
 - ✅ [`workspace/symbol`][workspacesymbol]
-- ✅ [`textDocument/codeAction`][codeaction] – Auto imports, adding `# type: ignore[<error-code>]`
+- ✅ [`textDocument/codeAction`][codeaction] - Auto imports, adding `# type: ignore[<error-code>]`
 - ✅ [`textDocument/prepareRename`][preparerename]
 - ✅ [`textDocument/rename`][rename]
 - ✅ [`textDocument/semanticTokens`][semantictokens]
 - ✅ [`textDocument/foldingRange`][foldingrange]
 - ✅ [`textDocument/selectionRange`][selectionrange]
 - ✅ [`notebookDocument/*`][notebookdocument]
-- 🚫 [`textDocument/formatting`][formatting] – Out of scope, use a formatter (e.g., Ruff/Black)
-- 🚫 [`textDocument/onTypeFormatting`][ontypeformatting] – Use a formatter
-- 🚫 [`textDocument/rangeFormatting`][rangeformatting] – Use a formatter
-- ❌ [`textDocument/codeLens`][codelens]
-- ❌ [`workspace/willRenameFiles`][willrenamefiles] – [#488]
-- ❌ [`callHierarchy/*`][callhierarchy] – [#488]
-- ❌ [`typeHierarchy/*`][typehierarchy] – [#488]
-- ⬛ [`textDocument/documentColor`][documentcolor] – No built‑in color representation in Python
-- ⬛ [`textDocument/documentLink`][documentlink] – No built‑in resource link representation in Python; imports use [`textDocument/definition`][definition]
+- ❌ [`workspace/willRenameFiles`][willrenamefiles] - [#488]
+- ❌ [`callHierarchy/*`][callhierarchy] - [#488]
+- ❌ [`typeHierarchy/*`][typehierarchy] - [#488]
+- 🚫 [`textDocument/formatting`][formatting] - Out of scope for a typechecker, use a formatter (e.g., Ruff/Black)
+- 🚫 [`textDocument/onTypeFormatting`][ontypeformatting] - Use a formatter
+- 🚫 [`textDocument/rangeFormatting`][rangeformatting] - Use a formatter
+- ⬛ [`textDocument/documentColor`][documentcolor] - No built‑in color representation in Python
+- ⬛ [`textDocument/documentLink`][documentlink] - No built‑in resource link representation in Python; imports use [`textDocument/definition`][definition]
+- ⬛ [`textDocument/codeLens`][codelens] - It's not clear what would it do that isn't covered by references / code actions
 
-The `experimental` field of [`ClientCapabilities`](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#clientCapabilities) is ignored – Zuban has no support for non‑standard LSP extensions.
+The `experimental` field of [`ClientCapabilities`](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#clientCapabilities)
+is ignored - Zuban has no support for non‑standard LSP extensions.
 </details>
 
 ## General Code Understanding
@@ -106,8 +107,7 @@ The `experimental` field of [`ClientCapabilities`](https://microsoft.github.io/l
 - Correct resolution of relative, absolute, and stub-only (`.pyi`) imports
 - Type narrowing - Based on isinstance, assert, if conditions, etc
 - Inferring the type context (e.g. `x: list[object] = [1]`)
-- Understanding `list.append, list.extend, set.add, set.update, dict.__setitem__, dict.update` to empty collections (rather than defaulting to `list[Any]`)
-  (No support for this in user-defined data structure classes, those still need annotation on initialization)
+- Understanding `list.append, list.extend, set.add, set.update, dict.__setitem__, dict.update` to empty initialized collections (rather than defaulting to `list[Any]`)
 
 ## Development Tooling
 
