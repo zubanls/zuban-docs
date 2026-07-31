@@ -4,6 +4,14 @@
 
 All of these changes are highlights, there's always smaller bugfixes included.
 
+### 0.9.1 (2026-07-31)
+
+- Added support for `inlayHintMode` in `initializationOptions`. It can be `off`
+  or `default`
+- Added a way to extend builtin names: `__builtins__.pyi` can be created in
+  your project or anywhere on your sys path and its names will be globally
+  accessible.
+
 ### 0.9.0 (2026-06-23)
 
 - **Breaking:** The mode selection had bugs in some cases. Now the mode

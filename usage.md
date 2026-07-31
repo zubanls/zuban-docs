@@ -55,6 +55,8 @@ There are a few LSP `initializationOptions` that can be used:
 - `pythonExecutable` a string (path) to the python executable of an
   environment. The exact same option is available when executing
   `zuban check --python-executable <path>`.
+- `inlayHintMode` can be `default` (default) or `off`. Enables or disables
+  inlay hints.
 
 (usage-modes)=
 ## Modes
