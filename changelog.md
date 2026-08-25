@@ -4,6 +4,10 @@
 
 All of these changes are highlights, there's always smaller bugfixes included.
 
+### 0.9.2 (2026-08-26)
+
+- Apart from a bugfixes it fixes a some newer and upcoming conformance test issues
+
 ### 0.9.1 (2026-07-31)
 
 - Added support for `inlayHintMode` in `initializationOptions`. It can be `off`
