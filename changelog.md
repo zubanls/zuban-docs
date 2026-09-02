@@ -4,9 +4,14 @@
 
 All of these changes are highlights, there's always smaller bugfixes included.
 
+### 0.9.3 (2026-09-02)
+
+- The type checker now processes files in a deterministic order
+- Fix toxic O(N^2) cases with literals
+
 ### 0.9.2 (2026-08-26)
 
-- Apart from a bugfixes it fixes a some newer and upcoming conformance test issues
+- Add variance to TypeVarTuple and ParamSpec
 
 ### 0.9.1 (2026-07-31)
 
