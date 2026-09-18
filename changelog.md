@@ -4,6 +4,12 @@
 
 All of these changes are highlights, there's always smaller bugfixes included.
 
+### 0.10.0 (2026-09-18)
+
+- Change annotation forward reference resolving to the latest conformance test specification
+- Make auto-imports much faster in cases with thousands of files and limit it in some cases
+- Fixed a few really annoying crashes
+
 ### 0.9.3 (2026-09-02)
 
 - The type checker now processes files in a deterministic order
