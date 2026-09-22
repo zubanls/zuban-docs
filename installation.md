@@ -91,7 +91,7 @@ After [installing](installation_start) Zuban, add LSP support using
 (use-package eglot
   :config
   (add-to-list 'eglot-server-programs
-               '((python-mode python-ts-mode) . ("zubanls"))))
+               '((python-mode python-ts-mode) . ("zuban" "server"))))
 ```
 
 ## Kate
@@ -103,7 +103,7 @@ After [installing](installation_start) Zuban, add the following to
 {
     "servers": {
         "python": {
-            "command": ["zubanls"],
+            "command": ["zuban", "server"],
             "url": "https://github.com/zubanls/zuban",
             "highlightingModeRegex": "^Python$"
         }
