@@ -4,6 +4,10 @@
 
 All of these changes are highlights, there's always smaller bugfixes included.
 
+### Unreleased
+
+- Upgraded the shipped django-stubs to make Django 6.1 work better
+
 ### 0.10.0 (2026-09-18)
 
 - Change annotation forward reference resolving to the latest conformance test specification

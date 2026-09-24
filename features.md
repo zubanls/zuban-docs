@@ -125,11 +125,16 @@ is ignored - Zuban has no support for non‑standard LSP extensions.
   is already over 20× faster than Mypy. Multi-core support is planned.
 - Optimized to minimize memory usage.
 
+## Pytest & Django Support
+
+- Django models are supported
+- Pytest fixtures are supported
+
 ## Missing Features
 
 - Unused `# type: ignore` comments are not yet reported.
 - General plugin support is not planned; however, targeted plugins for popular
-  libraries, such as Django, will be provided.
+  libraries, such as Django and pytest is provided.
 - Function bodies using constrained TypeVar definitions (e.g., `TypeVar("T", str, bytes)`, `[T: (str, bytes)]`)
   are not currently type-checked. This limitation is unlikely to affect most users.
 
