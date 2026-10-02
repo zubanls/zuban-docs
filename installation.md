@@ -114,17 +114,16 @@ After [installing](installation_start) Zuban, add the following to
 ## Sublime Text
 
 After [installing](installation_start) Zuban and the
-[Sublime-LSP](https://github.com/sublimelsp/LSP/) package, update
-the LSP.sublime-settings with the following snippet:
+[Sublime-LSP](https://github.com/sublimelsp/LSP/) package, open
+`Preferences: LSP Server Configurations` from the Command Palette
+and add entry for the Zuban server:
 
 ```json
 {
-    "clients": {
-        "zuban": {
-            "enabled": true,
-            "command": ["uvx", "zuban@latest", "server"],
-            "selector": "source.python, text.shebang"
-        }
+    "zuban": {
+        "enabled": true,
+        "command": ["uvx", "zuban@latest", "server"],
+        "selector": "source.python"
     }
 }
 ```
