@@ -173,6 +173,19 @@ PYTHONPATH="src:src2/nested" zuban check
 
 The same is also possible with `MYPYPATH`.
 
+### Packages not found when installed with `pip install -e .`
+
+If a package is not found it might have been installed with `pip install -e .`.
+
+Zuban is unable to find these packages because there is no path within the
+created `*.pth` file. To solve this you can use the `compat` mode:
+
+```bash
+    python -m pip install -e . --config-settings editable_mode=compat
+```
+
+You can also set `export PIP_CONFIG_SETTINGS="editable_mode=compat".
+
 ## Configuration Examples
 
 (disable-type-checking)=
