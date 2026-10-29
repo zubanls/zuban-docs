@@ -6,7 +6,21 @@ All of these changes are highlights, there's always smaller bugfixes included.
 
 ### Unreleased
 
+### 0.10.2 (2026-10-29)
+
+- Sys paths calculation was refactored and improved especially for
+  Ubuntu/Debian-likes and Fedora-likes. Let me know if there are still issues.
+- Fixed a really annoying invalidation bug that was crashing the language server
+- Added documentation for docstrings on assignments (LSP)
+- Added documentation for generic and overloaded return types in calls (LSP)
+
+### 0.10.1 (2026-10-11)
+
 - Upgraded the shipped django-stubs to make Django 6.1 work better
+- LSP diagnostics pulls are now invalidated with refreshes if files change that
+  are not opened in the editor
+- Matching multiple TypeVars in a union is now working in a more solid way
+- Mypy primer was added to the CI
 
 ### 0.10.0 (2026-09-18)
 
